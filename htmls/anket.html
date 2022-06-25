@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- local bootstrap css -->
+    <link rel="stylesheet" href="../src/bootstrap-4.0.0/style/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- bootstrap js -->
+    <script src="../src/bootstrap-4.0.0/script/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="../src/bootstrap-4.0.0/script/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="../src/bootstrap-4.0.0/script/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- my style css -->
+    <link rel="stylesheet" href="../style/style.css">
+    
+    <title>Anketa</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="index.html">Green Card</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Bosh sahifa<span class="sr-only"></span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="services.html">Xizmatlar</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="about.html">Malumotlar</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contact.html">Aloqa</a>
+				</li>
+			</ul>
+			<li class="form-inline my-2 my-lg-0">
+                <a class="btn btn-success" href="anket.html">Anketa to'ldirish</a>
+			</li>
+		</div>
+	</nav>
+	
+    <div class="container-fluid">
+    <!-- {% block content %}  -->
+    
+<!--  -->
+<div class="container-fluid">
+    <div class="real">
+        <form action="/anketa" method="post">
+            <input type="checkbox" checked hidden name="personal" value="True">
+            <h2 class="sec-title">Shaxsiy Malumotlaringiz:</h2>
+            <div class="seq-body">
+                <div class="row">
+                    <div class="input-group">
+                        <input type="text" class="form__input" name="fname" id="fname" placeholder=" " required>
+                        <label class="form__label" for="fname">Ism(ingliz tilida)</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form__input" name="lname" id="lname" placeholder=" " required>
+                        <label class="form__label" for="lname">Familya(ingliz tilida)</label>
+                    </div>
+                    <div class="box">
+                        <label class="sec-title" for="">Jins:</label>
+                        <div class="input-group">
+                            <input type="radio" class="form__input" name="gender" id="male" value="male" required>
+                            <label class="form__label_radio" for="male">Erkak</label>
+                            <i for="female"></i>
+                        </div>
+                        <div class="input-group">
+                            <input type="radio" class="form__input" name="gender" id="female" value="female" required>
+                            <label class="form__label_radio" for="female" >Ayol</label>
+                            <i for="female"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <label class="sec-title" for="birth_date" >Tug'ilgan Sana:</label>
+                        <div class="input-group">
+                            <input type="date" name="birth_date" id="birth_date" required>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <label class="sec-title" for="city" >Tug'ilgan joy:</label>
+                        <div class="input-group">
+                            <select name="city" id="city" onchange="getCity()" required>
+                                <!-- <option value="">_______</option> -->
+                            </select>
+                            <select name="district" id="district" onchange="getDistrict()" required>
+                                <!-- <option value="">_______</option> -->
+                            </select>                             
+                            <div class="input-group">
+                                <input class="form__input" type="text" name="street" id="street" placeholder="  " required>
+                                <label class="form__label" for="street">Ko'cha/Qishloq nomini va raqami</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <label class="sec-title" for="pass_seria">Passport:</label>
+                        <div class="input-group">
+                            <input class="form__input" type="text" name="pass_seria" id="pass_seria" maxlength="2" minlength="2" size="2" style="text-transform:uppercase; width: 55px;" onkeydown="return /[a-z]/i.test(event.key)" placeholder="  " required>
+                            <label class="form__label" for="pass_seria">seria: AA</label>
+                        </div>
+                        <div class="input-group">
+                            <input class="form__input" type="text" name="pass_num" id="pass_num" maxlength="7" minlength="7" size="7" style="text-transform:uppercase; width: 135px;" pattern="[0-9]{7}"  placeholder="  " required>
+                            <label class="form__label" for="pass_num">raqam: 0000000</label>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <label class="sec-title" for="pass_end_date" >Amal qilish muddati:</label>
+                        <div class="input-group">
+                            <input type="date" name="pass_end_date" id="pass_end_date" required>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <label class="sec-title" for="">Fotosurat yuklash:</label>
+                        <p class="text-danger"><b>Diqqat!</b> Suratga tik holatda qaralgan, ortiqcha yorug'lik, soyalarsiz va orqa fon oq rangda olingan bo'lishi kerak</p>
+                        <div class="about-image">
+                            <img src="../src/images/img_templates/chinese_woman_false.jfif" alt="" height="200">                            
+                            <img src="../src/images/img_templates/photo-example-light.png"  height="200" alt="">                            
+                            <img src="../src/images/img_templates/photo-example-background.png"  height="200" alt="">                            
+                            <img src="../src/images/img_templates/photo-example-true.png" height="200" alt="">                            
+                        </div>
+                        <input type="file" accept="image/*" name="image" id="image" required>
+                    </div>
+                    <div class="box">
+                        <label class="sec-title" for="edu_grade" >Talim darajangiz:</label>
+                        <div class="input-group">
+                            <select name="edu_grade" id="edu_grade" required>
+                                <option value="">----------</option>
+                                <option value="class_9">Maktab(9-sinf)</option>
+                                <option value="class_11">Maktab(11-sinf)</option>
+                                <option value="litsey">Litsey</option>
+                                <option value="collage">Kollej</option>
+                                <option value="hight_school">Oliy talim</option>
+                                <option value="magistr">Magistratura</option>
+                                <option value="aspirant">Aspirantura</option>
+                                <option value="doctorant">Doctorantura</option>
+                            </select>
+                        </div>
+                        <label class="sec-title" for="family_state" >Oilaviy holatingiz</label>
+                        <div class="input-group">              
+                        <select name="family_state" id="family_state" required>
+                            <option value="">----------</option>
+                            <option value="not_merried">Turmush qurmagan</option>
+                            <option value="merried">Turmush qurgan</option>
+                            <option value="divorced">Ajrashgan/Ajrashuvda</option>
+                            <option value="single">Yolg'iz </option>
+                        </select>
+                        </div>
+                    </div>
+                    <h5 class="text-info">21 yoshdan oshmagan farzand(lar)ingiz va turmush o'rtog'ingiz xaqida malumot kiriting ( agar mavjud bo'lsa ) </h5>
+                    <div style="display: none;" id="photoRule" class="box">
+                        <p class="text-info">Yoshbolalar uchun shablonlar: surat 5x5 o'lchamda bo'lishi kerak</p>
+                        <img src="../src/images/img_templates/baby_false_dnt_look.png" alt="baby fals" height="180">
+                        <img src="../src/images/img_templates/baby_false_wth_toy.png" alt="baby fals" height="180">
+                        <img src="../src/images/img_templates/baby_true.png" alt="baby fals" height="180">
+                    </div>
+                    <div id="memberList" class="box">
+                        
+                    </div>
+                    <button class="btn btn-success d-bloc">Tayyor (yuborish)</button>
+                </div>
+                <br>
+            </div>
+        </form>
+        <button class="btn btn-outline-info d-bloc" onclick="addMember()"> + Oila azosi qo'shish</button>            
+    </div>
+</div>
+
+
+
+<!--  -->
+
+    
+    <a href="tel:+998943567481">CLICK TO CALL</a>
+    
+    <!-- {% endblock content %}  -->
+    </div>
+
+</body>
+<script src="../js/data.js"></script>
+<script src="../js/app.js"></script>
+</html>

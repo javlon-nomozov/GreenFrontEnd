@@ -1,0 +1,260 @@
+*,
+*:before,
+*:after{
+    outline: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+*::selection{
+    color: #fff;
+    background-color: #00ffea79;
+}
+
+.navbar{
+    min-width: 320px;
+}
+
+
+/* style for date input */
+input[type="date"]{
+    background-color: #17a2b8;
+    padding: 5px 27px;
+    font-family: "Roboto Mono",monospace;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* style for file button */
+input[type="file"]{
+    color: #fff;
+    width: 300px;
+    background-color: #17a2b8;
+}
+
+/* style form * text inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="file"],
+input[type="date"],
+select{
+    padding: 5px 10px;
+    font-size: 16px;
+    overflow: hidden;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 5px 1px;
+    transition: all 0.2s;
+    min-width: 300px;
+}
+
+select option{
+    font-size: 16px;
+}
+
+input:focus,
+select:focus{
+    border: 1px solid #17a2b8;
+    outline: 3px solid #17a3b8c0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.form-section{
+    width: 50%;
+    display: inline-block;
+    /* margin: auto; */
+}
+
+label{
+    display: inline-block;
+    font-size: 18px;
+    padding-right: 20px;
+    font-weight: bold;
+}
+
+.txt-ali-c{
+    text-align: center;
+}
+
+label.txt-ali-c{
+    text-align: center;
+    padding-right: 7%;
+}
+
+
+input.txt-ali-c:focus{
+    text-align: left;
+}
+
+.con-ali-c{
+    align-content: center;
+}
+
+.input-group{
+    margin-top: 10px;
+    display: inline-block;
+    width: auto;
+}
+
+.input-group>.form__label{
+    display: inline-block;
+    background-color: #fff;
+    padding: 0 3px;
+    margin: 2px 0;
+    font-weight: 400;
+    min-width: 285px;
+    max-height: 30px;
+    font-size: 18px;
+    color: #6c757d;
+    position: absolute;
+    cursor: text;
+    transform: translate(-290px, 6px);
+    transition: 0.15s;
+}
+
+.box{
+    display: inline-block;
+}
+
+
+.input-group>.form__input:focus~.form__label,
+.input-group>.form__input:not(:placeholder-shown)~.form__label{
+    color: #17a2b8;
+    transform: translate(-300px, -7px);
+    font-size: 14px;
+}
+
+.input-group>.form__input:not(:placeholder-shown){
+    border-color: #17a2b8;
+}
+
+
+.header-description{
+    padding: 40px 10vw ;
+    position: relative;
+    background-image: url("../src/images/background/los-angeles_o.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header-title-text{
+    font-size: 12vw;
+    color: #39ff14;
+}
+
+.header-secondary-title{
+    font-size: 8vw;
+    color: #17a2b8;
+}
+
+.text-success{
+    color: #39ff14;
+}
+
+.bg-success{
+    background-color: #39ff14;
+}
+
+.header-description-text{
+    color: #39ff14;
+    font-size: 4vw;
+
+}
+
+.sec-title{
+    display: block;
+    padding: 5px 0px 0px 5px;
+    margin: 5px 0 0 0 ;
+    /* color:  hsla(7, 100%, 51%, 0.781); */
+    color: #6c757d;
+}
+
+
+input[type="radio"]{
+    width: 0;
+    height: 0;
+    outline: none;
+    transform: translate(10px, 5px);
+}
+
+.form__label_radio{
+    color: #6c757d;
+    position: relative;
+    width: 140px;
+    border: 1px solid #333;
+    border-radius: 7px;
+    font-weight: 500;
+    padding: 3px 25px;
+    padding-inline-start: 30px;
+    padding-inline-end: auto;
+    transform: translate(-0px, -0px);
+    transition: all 0.2s ;
+    margin: 3px;
+}
+
+input[type="radio"]:checked~.form__label_radio{
+    color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+input[type="radio"]:focus~.form__label_radio{
+    outline: 3px solid #17a3b8c0;
+}
+
+
+input[type="radio"]~i{
+    padding: 5px;
+    position: absolute;
+    width: 16px;
+    height: 17px;
+    transition: all 0.2s ;
+    border: 2px solid #6c757d;
+    transform: translate(-135px, 12px);
+}
+
+input[type="radio"]:checked~i{
+    transform: rotate(-135deg);
+    border: 3px solid #17a2b8;
+    border-bottom: none;
+    border-right: none;
+    width: 10px;
+    transform: translate(-133px, 9px)
+               rotate(-135deg)
+}
+
+.text-color-grey{
+    color: #6c757d;
+}
+
+.d-bloc{
+    display: block;
+    margin: auto;
+}
+
+.member_info{
+    background-color: #17a2b8;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+.member{
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 3px solid #17a2b8;
+    margin-bottom: 10px;
+}
