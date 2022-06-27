@@ -39,9 +39,6 @@
 					<a class="nav-link" href="contact.html">Aloqa</a>
 				</li>
 			</ul>
-			<li class="form-inline my-2 my-lg-0">
-                <a class="btn btn-success" href="anket.html">Anketa to'ldirish</a>
-			</li>
 		</div>
 	</nav>
 	
@@ -52,7 +49,9 @@
 <div class="container-fluid">
     <div class="real">
         <form action="/anketa" method="post">
-            <input type="checkbox" checked hidden name="personal" value="True">
+            <input type="checkbox" checked hidden name="personal" id="personal" value="True">
+            <input type="checkbox" checked hidden name="has_mer" id="has_mer" value="False">
+            <input type="checkbox" checked hidden name="memberCount" id="memberCount" value="">
             <h2 class="sec-title">Shaxsiy Malumotlaringiz:</h2>
             <div class="seq-body">
                 <div class="row">
@@ -162,12 +161,15 @@
                     <div id="memberList" class="box">
                         
                     </div>
-                    <button class="btn btn-success d-bloc">Tayyor (yuborish)</button>
+                    <button id="submit" class="btn btn-success d-bloc" hidden >Tayyor (yuborish)</button>
                 </div>
                 <br>
             </div>
         </form>
-        <button class="btn btn-outline-info d-bloc" onclick="addMember()"> + Oila azosi qo'shish</button>            
+        <button class="btn btn-outline-info d-bloc" onclick="addMember()"> + Oila azosi qo'shish</button>
+        <br> 
+        <label for="submit" class="btn btn-success d-bloc" style="width: 120px; margin:auto;">yuborish</label>
+        <br> 
     </div>
 </div>
 

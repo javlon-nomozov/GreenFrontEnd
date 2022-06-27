@@ -111,8 +111,10 @@ photoRule = document.getElementById('photoRule')
 function allConditions(){
     if(member>0){
         photoRule.style.display='block'
+        document.getElementById('personal').value = 'False'
     }else if(member<=1){
         photoRule.style.display='none'
+        document.getElementById('personal').value = 'True'
     }
 }
 
@@ -124,9 +126,11 @@ function addMember(){
     memForm.innerHTML = templateGen(member)
     let memberList = document.getElementById('memberList')
     memberList.appendChild(memForm)
+    document.getElementById('memberCount').value=`${member}`
+    console.log(document.getElementById('memberCount').value)
 }
 
-console.log(templateGen('_mer','Joe', 'McNeil', 'male','2000-09-16', 'address', true))
+// console.log(templateGen('_mer','Joe', 'McNeil', 'male','2000-09-16', 'address', true))
 
 
 // // when user select merried option 
@@ -138,8 +142,10 @@ function merAdd(){
         memForm.innerHTML = templateGen('_mer','','','','','',true)
         let memberList = document.getElementById('memberList')
         memberList.appendChild(memForm)
+        document.getElementById('has_mer').value = 'True'
     }else{
         document.getElementById('memberList').removeChild(document.getElementById('member_mer'))
+        document.getElementById('has_mer').value = 'False'
     }
 }
 
