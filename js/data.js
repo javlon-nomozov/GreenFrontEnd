@@ -227,7 +227,7 @@ const district = [
 
 
 
-    let cities, districts, select_city, select_district, city_districts = []
+let cities, districts, select_city, select_district, city_districts = []
 
 select_city = document.getElementById("city")
 select_district = document.getElementById("district")
