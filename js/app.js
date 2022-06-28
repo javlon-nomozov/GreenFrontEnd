@@ -136,7 +136,6 @@ function addMember(){
 // // when user select merried option 
 function merAdd(){
     if(document.getElementById('family_state').value == 'merried'){    
-        allConditions()
         let memForm = document.createElement('div')
         memForm.id = `member_mer`
         memForm.innerHTML = templateGen('_mer','','','','','',true)
@@ -147,5 +146,6 @@ function merAdd(){
         document.getElementById('memberList').removeChild(document.getElementById('member_mer'))
         document.getElementById('has_mer').value = 'False'
     }
+    allConditions()
 }
 
