@@ -21,7 +21,7 @@ function templateGen(x, fname, lname, gender, birth_date, address, is_for_mer){
         address=''
     }
     if(!is_for_mer){
-        is_for_mer=''
+        is_for_mer='<h3 class="sec-title">Farzandingiz xaqidagi malumotlar uchun</h3>'
     }else{
         is_for_mer='<h3 class="sec-title">Turmush o\'rtog\'ingiz xaqidagi malumotlar uchun</h3>'
     }
