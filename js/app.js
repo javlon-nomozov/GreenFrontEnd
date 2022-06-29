@@ -107,7 +107,7 @@ return html
 }
 
 function generatePassword() {
-    var length = 16,
+    var length = 10,
         charset = "123456789",
         retVal = "";
     for (var i = 0, n = charset.length; i < length; ++i) {
