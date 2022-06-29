@@ -106,6 +106,19 @@ function templateGen(x, fname, lname, gender, birth_date, address, is_for_mer){
 return html
 }
 
+function generatePassword() {
+    var length = 16,
+        charset = "123456789",
+        retVal = "";
+    for (var i = 0, n = charset.length; i < length; ++i) {
+        retVal += charset.charAt(Math.floor(Math.random() * n));
+    }
+    return retVal;
+}
+
+document.getElementById('code').value = generatePassword() 
+
+
 photoRule = document.getElementById('photoRule')
 
 function allConditions(){
