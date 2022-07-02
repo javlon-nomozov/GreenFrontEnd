@@ -258,3 +258,33 @@ input[type="radio"]:checked~i{
     border: 3px solid #17a2b8;
     margin-bottom: 10px;
 }
+
+.success-img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background: url('../src/images/background/5290058.png');
+    background-size: cover;
+}
+
+.submited-datas{
+    /* width: ; */
+    margin: auto;
+    color: #09ef54;
+    font-weight: 600;
+}
+
+.submited-datas tr td{
+    font-size: 30px;
+}
+
+.submited-datas tr td:first-child{
+    padding: 10px 20px;
+    text-align: right;
+}
+
+.table-title{
+    color: #09ef54;
+    text-align: center;
+}
