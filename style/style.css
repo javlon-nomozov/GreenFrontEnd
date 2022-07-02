@@ -284,7 +284,30 @@ input[type="radio"]:checked~i{
     text-align: right;
 }
 
-.table-title{
+.submited-datas .table-title{
+    color: #333;
+    text-align: center;
+}
+
+
+.err-submited-datas{
+    /* width: ; */
+    margin: auto;
+    color: #333;
+    font-weight: 600;
+}
+
+.err-submited-datas tr td{
+    font-size: 30px;
+}
+
+.err-submited-datas tr td:first-child{
+    padding: 10px 20px;
+    text-align: right;
+}
+
+.err-submited-datas .table-title{
     color: #09ef54;
     text-align: center;
 }
+

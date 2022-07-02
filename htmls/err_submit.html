@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <!-- local bootstrap css -->
+    <link rel="stylesheet" href="../src/bootstrap-4.0.0/style/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    
+    <script src="../src/bootstrap-4.0.0/script/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="../src/bootstrap-4.0.0/script/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="../src/bootstrap-4.0.0/script/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- my style css -->
+    <link rel="stylesheet" href="../style/style.css">
+    
+    <title>Home</title>
+</head>
+<body>
+    <nav class="navbar-expand-lg navbar navbar-dark bg-dark">
+		<a class="navbar-brand" href="../index.html">Green Card</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+        
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="../index.html">Bosh sahifa<span class="sr-only"></span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="services.html">Xizmatlar</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="about.html">Malumotlar</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contact.html">Aloqa</a>
+				</li>
+			</ul>
+			<li class="form-inline my-2 my-lg-0">
+                <a class="btn btn-success" href="anket.html">Anketa to'ldirish</a>
+			</li>
+		</div>
+	</nav>
+	
+    <div class="container-fuild">
+    <!-- {% block content %}  -->
+    
+<!-- <div class="container-fluid"> -->
+    
+    <table class="err-submited-datas">
+        <tr>
+            <span colspan="2" class="success-img"></span>
+            <h1 class="table-title">Anketa avvalroq kiritilgan</h1>
+        </tr>
+        <tr>
+            <td>Ism: </td>
+            <td>{{ fname }}</td>
+        </tr>
+        <tr>
+            <td>Familiya: </td>
+            <td>{{ lname }}</td>
+        </tr>
+        <tr>
+            <td>Yashash joyi: </td>
+            <td>{{ address }}</td>
+        </tr>
+    </table>
+    {% if members %}
+    
+    <table class="err-submited-datas">
+        <tr>
+            <h2 colspan="2" class="table-title">Oila azo(lar)i:</h2>
+        </tr>
+        {% for member in members %}
+        <tr>
+            <td> {{ member.0 }} -- </td>
+            <td> {{ member.1 }} -- </td>
+            <td> {{ member.4 }} </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    {% endif %}
+
+    
+<!-- </div> -->
+    <!-- {% endblock content %}  -->
+    </div>
+
+</body>
+<script src="../js/data.js"></script>
+</html>
