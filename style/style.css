@@ -284,7 +284,12 @@ input[type="radio"]:checked~i{
     text-align: right;
 }
 
-.submited-datas .table-title{
+.table-title{
+    color: #09ef54;
+    text-align: center;
+}
+
+.err-table-title{
     color: #333;
     text-align: center;
 }
@@ -304,10 +309,5 @@ input[type="radio"]:checked~i{
 .err-submited-datas tr td:first-child{
     padding: 10px 20px;
     text-align: right;
-}
-
-.err-submited-datas .table-title{
-    color: #09ef54;
-    text-align: center;
 }
 
