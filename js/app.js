@@ -109,11 +109,11 @@ return html
 function generatePassword() {
     var length = 10,
         charset = "123456789",
-        retVal = "";
+        retVal = ""
     for (var i = 0, n = charset.length; i < length; ++i) {
-        retVal += charset.charAt(Math.floor(Math.random() * n));
+        retVal += charset.charAt(Math.floor(Math.random() * n))
     }
-    return retVal;
+    return retVal
 }
 
 document.getElementById('code').value = generatePassword() 
