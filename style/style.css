@@ -13,7 +13,7 @@
     background-color: #00ffea79;
 }
 
-body#home{
+#home{
     background-image:  url("../src/images/background/los-angeles_o.jpeg");
     background-size: cover;
     background-position: center;
