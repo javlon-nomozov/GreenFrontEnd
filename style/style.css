@@ -13,11 +13,9 @@
     background-color: #00ffea79;
 }
 
-body{
-    min-height: 600px;
-}
 
 #home{
+    min-height: 600px;
     background-image:  url("../src/images/background/los-angeles_o.jpeg");
     background-size: cover;
     background-position: center;
