@@ -13,16 +13,13 @@
     background-color: #00ffea79;
 }
 
-body{
-    min-height: 600px;
-}
-
 #home{
     background-image:  url("../src/images/background/los-angeles_o.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     backdrop-filter: blur(18px);
+    min-height: 600px;
 }
 
 .navbar{
